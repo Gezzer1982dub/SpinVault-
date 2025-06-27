@@ -1,0 +1,73 @@
+{
+  "manifest_version": 3,
+  "name": "SpinVault - Full Auto Detection",
+  "version": "1.2.8",
+  "description": "Automatically track and manage gambling rewards with advanced detection",
+  "permissions": ["storage", "tabs", "cookies", "notifications"],
+  "host_permissions": [
+    "https://*.bet365.com/*",
+    "https://*.paddypower.com/*",
+    "https://*.skybet.com/*",
+    "https://*.williamhill.com/*",
+    "https://*.ladbrokes.com/*",
+    "https://*.coral.co.uk/*",
+    "https://*.betfair.com/*",
+    "https://*.boylesports.com/*",
+    "https://*.unibet.co.uk/*",
+    "https://*.888sport.com/*",
+    "https://*.888casino.com/*",
+    "https://*.betfred.com/*",
+    "https://*.meccabingo.com/*",
+    "https://*.heartbingo.co.uk/*",
+    "https://*.betvictor.com/*",
+    "https://*.10bet.co.uk/*",
+    "https://*.betway.com/*",
+    "https://e3358ddb-cf0c-495d-95cd-423fbf06a5bd-00-3en8vm9jsxml6.picard.replit.dev/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.bet365.com/*",
+        "https://*.paddypower.com/*",
+        "https://*.skybet.com/*",
+        "https://*.williamhill.com/*",
+        "https://*.ladbrokes.com/*",
+        "https://*.coral.co.uk/*",
+        "https://*.betfair.com/*",
+        "https://*.boylesports.com/*",
+        "https://*.unibet.co.uk/*",
+        "https://*.888sport.com/*",
+        "https://*.888casino.com/*",
+        "https://*.betfred.com/*",
+        "https://*.meccabingo.com/*",
+        "https://*.heartbingo.co.uk/*",
+        "https://*.betvictor.com/*",
+        "https://*.10bet.co.uk/*",
+        "https://*.betway.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["auto-detection.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
